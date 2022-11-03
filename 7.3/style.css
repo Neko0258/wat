@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.qhuy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 15vw;
+}
+.flex{
+    display: flex;
+}
+
+.thongtin{
+    font-weight: 600; 
+    margin-left: 10px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+.giua{
+    text-align: center;
+}
