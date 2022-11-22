@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <style type="text/css">
+      #hoatanh {
+        text-align: center;
+      }
+      #anh {
+        text-align: center;
+      }
+    </style>
+    <script type="text/javascript">
+      function anh2() {
+        document.anhdong.anh2 = "2.png";
+      }
+      function anh3() {
+        document.anhdong.src = "3.png";
+      }
+      function anh4() {
+        document.anhdong.src = "4.png";
+      }
+      function anh1() {
+        document.anhdong.src = "1.png";
+      }
+      function Jump() {
+        setTimeout(function () {
+          anh2();
+        }, 500);
+        setTimeout(function () {
+          anh3();
+        }, 700);
+        setTimeout(function () {
+          anh4();
+        }, 900);
+        setTimeout(function () {
+          anh1();
+        }, 1100);
+      }
+      function on_click() {
+        jumping = setInterval("Jump()", 1200);
+      }
+      function on_click1() {
+        clearInterval(jumping);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="anh"><img src="1.png" name="anhdong" /></div>
+    <div id="hoatanh">
+      <button onclick="on_click()" name="jump">Jump</button>
+      <button onclick="on_click1()" name="stop">Stop</button>
+    </div>
+  </body>
+</html>
