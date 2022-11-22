@@ -1,39 +1,39 @@
 .login_box {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 .login_box input {
-  padding: 7.5px 15px;
+  padding: 10px 20px;
   width: 93%;
-  border: 1px solid #cccccc;
+  border: 2px solid #cccccc;
   outline: none;
 }
 
 .login-form {
   width: 200%;
-  max-width: 500px;
-  margin: 30px auto;
+  max-width: 1000px;
+  margin: 60px auto;
   background-color: #ffffff;
-  padding: 15px;
-  border: 2px double #cccccc;
-  border-radius: 10px;
+  padding: 30px;
+  border: 4px double #cccccc;
+  border-radius: 20px;
 }
 
 h1 {
-  color: #1a9900;
-  font-size: 20px;
-  margin-bottom: 20px;
+  color: red;
+  font-size: 40px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
 .add {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .add button {
-  padding: 7.5px 50px;
+  padding: 15px 100px;
   border-radius: 2px;
   color: #ffffff;
-  background-color: #007d99;
+  background-color: black;
   border: none;
   outline: none;
 }

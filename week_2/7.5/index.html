@@ -8,12 +8,12 @@
 </head>
 <style>
     body {
-        width: 30vw;
+        width: 60vw;
         margin: auto;
     }
     .container {
-        background-color:antiquewhite;
-        padding: 20px;
+        background-color: whitesmoke;
+        padding: 40px;
     }
     .title {
         text-align: center;
@@ -24,14 +24,14 @@
         align-items: center;
     }
     .required {
-        background-color: aqua;
+        background-color: tan;
     }
     .input>label {
-        flex: 1;
+        flex: 2;
     }
 
     .input-tag {
-        flex: 3;
+        flex: 6;
     }
     .buttons {
         display: flex;
@@ -48,16 +48,16 @@
 </style>
 <body>
     <div class="container">
-        <h1 class="title">Form Đăng Ký</h1>
+        <h1 class="title">Form Assign</h1>
             <div class="input">
-                <label for="name">Họ tên: </label>
+                <label for="name">Name: </label>
                 <div class="input-tag">
                     <input class="required" id="name" type="text" onblur="onValidateName()">
                     <div class="name-message-error message-error"></div>
                 </div>
             </div>
             <div class="input">
-                <label for="address">Địa chỉ: </label>
+                <label for="address">Address: </label>
                 <div class="input-tag">
                     <input id="address" type="text">
                 </div>
@@ -66,16 +66,16 @@
                 <label>Giới tính: </label>
                 <div class="input-tag">
                     <input class="radio" id="male" type="radio" name="gender">
-                    <label for="male">Nam</label>
+                    <label for="male">Male</label>
                     <input class="radio" id="female" type="radio" name="gender">
-                    <label for="female">Nữ</label>
+                    <label for="female">Female</label>
                     <div class="gender-message-error message-error"></div>
                 </div>
             </div>
             <div class="input">
-                <label for="birthday">Ngày sinh: </label>
+                <label for="birthday">Date of birth: </label>
                 <div class="input-tag">
-                    <input class="required" id="birthday" type="text" placeholder="nn/tt/nnnn" maxlength="10" onblur="onValidateBirthday()">
+                    <input class="required" id="birthday" type="text" placeholder="dd/mm/yyyy" maxlength="10" onblur="onValidateBirthday()">
                     <div class="birthday-message-error message-error"></div>
                 </div>
             </div>
@@ -87,53 +87,53 @@
                 </div>
             </div>
             <div class="input">
-                <label for="phone">Điện thoại: </label>
+                <label for="phone">Phone Number: </label>
                 <div class="input-tag">
                     <input id="phone" type="text" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
                 </div>
             </div>
             <div class="input">
-                <label for="course">Khóa đăng ký: </label>
+                <label for="course">Course: </label>
                 <div class="input-tag">
                     <input class="checkbox" type="checkbox" name="checkbox1">
-                    <label for="checkbox1">Tiếng Anh</label>
+                    <label for="checkbox1">English</label>
                     <input class="checkbox" type="checkbox" name="checkbox2">
-                    <label for="checkbox2">Quản trị</label>
+                    <label for="checkbox2">Math</label>
                     <input class="checkbox" type="checkbox" name="checkbox3">
-                    <label for="checkbox3">CNTT</label>
+                    <label for="checkbox3">Literature</label>
                     <div class="course-message-error message-error"></div>
                 </div>
             </div>
             <div class="input">
-                <label for="username">Tên sử dụng: </label>
+                <label for="username">Username: </label>
                 <div class="input-tag">
                     <input class="required" id="username" type="text">
                     <div class="username-message-error message-error"></div>
                 </div>
             </div>
             <div class="input">
-                <label for="password">Mật khẩu: </label>
+                <label for="password">Password: </label>
                 <div class="input-tag">
                     <input class="required" id="password" type="password">
                     <div class="password-message-error message-error"></div>
                 </div>
             </div>
             <div class="input">
-                <label for="confirm-password">Gõ lại mật khẩu: </label>
+                <label for="confirm-password">Confirm password: </label>
                 <div class="input-tag">
                     <input class="required" id="confirm-password" type="password" onblur="onValidatePassword()">
                     <div class="confirmpass-message-error message-error"></div>
                 </div>
             </div>
             <div class="input">
-                <label for="note">Ghi chú: </label>
+                <label for="note">Note: </label>
                 <div class="input-tag">
                     <textarea form="form-submit" name="note" id="note" cols="20" rows="3"></textarea>
                 </div>
             </div>
             <div class="buttons">
-                <button class="button-submit" onclick="onSubmit()">Chấp nhận</button>
-                <button>Bỏ qua</button>
+                <button class="button-submit" onclick="onSubmit()">Submit</button>
+                <button>Cancel</button>
             </div>
     </div>
     <script src="index.js"></script>

@@ -1,64 +1,97 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-const geography = [
+const math = [
   {
-    question: "Câu 1: Đặc điểm chung của nhóm các nước đang phát triển là?",
+    question: "Câu 1: Tập hợp A = {1; 2; 3; 4; 5; 6} có bao nhiêu tập hợp con gồm 2 phần tử?",
     answerA:
-      "A. GDP bình quân đầu người thấp, chỉ số HDI ở mức cao, nợ nước ngoài nhiều.",
+      "A. 30.",
     answerB:
-      "B. GDP bình quân đầu người cao, chỉ số HDI ở mức thấp, nợ nước ngoài nhiều.",
+      "B. 15.",
     answerC:
-      "C. GDP bình quân đầu người thấp, chỉ số HDI ở mức thấp, nợ nước ngoài nhiều.",
+      "C. 10.",
     answerD:
-      "D. Năng suất lao động xã hội cao, chỉ số HDI ở mức thấp, nợ nước ngoài nhiều.",
+      "D. 3.",
   },
   {
-    question: "Câu 2: Ý nào sau đây không phải là đặc điểm chung của nhóm các nước kinh tế phát triển?",
+    question: "Câu 2: Lớp 10A có 7 HS giỏi Toán, 5 HS giỏi Lý, 6 HS giỏi Hoá, 3 HS giỏi cả Toán và Lý, 4 HS giỏi cả Toán và Hoá, 2 HS giỏi cả Lý và Hoá, 1 HS giỏi cả 3 môn Toán , Lý, Hoá . Số HS giỏi  ít nhất một môn (Toán, Lý , Hoá ) của lớp 10A là:",
     answerA:
-      "A. Đầu tư nước ngoài lớn.",
+      "A. 9.",
     answerB:
-      "B. Ngành dịch vụ chiếm tỉ trọng lớn.",
+      "B. 10.",
     answerC:
-      "C. Chỉ số phát triển con người (HDI) cao",
+      "C. 18",
     answerD:
-      "D. Thu nhập bình quân đầu người không cao.",
+      "D. 28.",
   },
   {
-    question: "Câu 3: “ Trải qua quá trình công nghiệp hóa và đạt trình độ phát triển nhất định về công nghiệp” là đặc điểm nổi bật của nhóm nước?",
+    question: "Câu 3: “ Đồ thị hàm số đi qua hai điểm A(0;-3); B(-1;-5). Thì a và b bằng:”",
     answerA:
-      "A. Công nghiệp mới.",
+      "A. a = -2; b = 3.",
     answerB:
-      "B. Kinh tế đang phát triển.",
+      "B. a = 2; b = 3.",
     answerC:
-      "C. Kinh tế phát triển.",
+      "C. a = -2; b = -3.",
     answerD:
-      "D. Chậm phát triển.",
-  }
+      "D. a = 1; b = -4.",
+  },
+  {
+    question: "Câu 4: Hàm số y = f(x) có đạo hàm bằng 0 tại x = 1. Khi đó, giá trị của hàm số y = f(x) tại x = 2 là:",
+    answerA:
+      "A. 2.",
+    answerB:
+      "B. 3.",
+    answerC:
+      "C. 4.",
+    answerD:
+      "D. 5.",
+  },
 ];
 
-const history = [
+const english = [
   {
-    question: "Câu 1: Đại biểu xuất sắc cho nền bi kịch cổ điển Pháp ở buổi đầu thời cận đại là",
+    question: "Câu 1: My wife handles most of the chores around house. She is a_____________.",
     answerA:
-      "A. La Phông-ten.",
+      "A. homemaker.",
     answerB:
-      "B. Mô-li-e.",
+      "B. employer.",
     answerC:
-      "C. Coóc-nây.",
+      "C. breadwinner.",
     answerD:
-      "D. Sếch-xpia.",
+      "D. assistant.",
   },
   {
-    question: "Câu 2: Cuộc Duy tân Minh Trị của Nhật Bản được tiến hành từ năm",
+    question: "Câu 2: They have just bought a new house with a huge amount of money, therefore, there is a _________ on them. They have to work hard to earn money to pay the bank.",
     answerA:
-      "A. 1868.",
+      "A. physical strength.",
     answerB:
-      "B. 1889.",
+      "B. financial burden.",
     answerC:
-      "C. 1886.",
+      "C. household chore.",
     answerD:
-      "D. 1898.",
+      "D. positive atmosphere.",
+  },
+  {
+    question: "Câu 3: The teacher asked the students to write a short essay on the topic “My favorite subject”. The students were _________ to write the essay.",
+    answerA:
+      "A. required.",
+    answerB:
+      "B. forced.",
+    answerC:
+      "C. obliged.",
+    answerD:
+      "D. encouraged.",
+  },
+  {
+    question: "Câu 4: If parents behave well, they will__________a good example for their children.",
+    answerA:
+      "A. do.",
+    answerB:
+      "B. take.",
+    answerC: 
+      "C. set.",
+    answerD:
+      "D. buy.",
   },
 ];
 
@@ -93,6 +126,6 @@ const render = (exams) => {
 };
 
 const handleExam = (examName) => {
-    if(examName === 'dia') render(geography)
-    if(examName === 'su') render(history)
+    if(examName === 'math') render(math)
+    if(examName === 'english') render(english)
 };

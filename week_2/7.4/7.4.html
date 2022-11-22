@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form nhập thông tin</title>
+    <title>Form</title>
     <link rel="stylesheet" href="7.4.css" />
     <script>
       function dateIsValid(date) {
@@ -16,39 +16,31 @@
         }
       }
       function checkInfo() {
-        var MaHS = document.getElementById("MaHS").value;
-        var HoTen = document.getElementById("HoTen").value;
+        var StudentID = document.getElementById("StudentID").value;
+        var StudentName = document.getElementById("StudentName").value;
         var birth = document.getElementById("birth").value;
         var Addr = document.getElementById("addr").value;
-        var Lop = document.getElementById("Lop").value;
-        var DiemToan = document.getElementById("DiemToan").value;
-        var DiemLy = document.getElementById("DiemLy").value;
-        var DiemHoa = document.getElementById("DiemHoa").value;
+        var Class = document.getElementById("Class").value;
+        var MathScore = document.getElementById("MathScore").value;
+        var PhysicsScore = document.getElementById("PhysicsScore").value;
+        var ChemistryScore = document.getElementById("ChemistryScore").value;
         console.log(dateIsValid(new Date("2022-03-36")));
-        // Birth = new Date(birth);
-        if (MaHS.length > 8) {
-          // alert("Mã lớp không hợp lệ");
-          msg = "Mã SV không hợp lệ";
-        } else if (HoTen.length > 50) {
-          // alert("Họ tên không hợp lệ");
-          msg = "Họ tên không hợp lệ";
+        if (StudentID.length > 8) {
+          msg = "Student ID is invalid";
+        } else if (StudentName.length > 50) {
+          msg = "Student name is invalid";
         } else if (!dateIsValid(birth)) {
-          msg = "Ngày sinh không hợp lệ";
+          msg = "Birth date is invalid";
         } else if (addr.length > 150) {
-          // alert("Tên lớp không hợp lệ");
-          msg = "Địa chỉ không hợp lệ";
-        } else if (Lop.length > 6) {
-          // alert("Tên gvcn không hợp lệ");
-          msg = "Lớp không hợp lệ";
-        } else if (isNaN(DiemToan)) {
-          // alert("Tên gvcn không hợp lệ");
-          msg = "Điểm toán không hợp lệ";
-        } else if (isNaN(DiemLy)) {
-          // alert("Tên gvcn không hợp lệ");
-          msg = "Điểm lý không hợp lệ";
-        } else if (isNaN(DiemHoa)) {
-          // alert("Tên gvcn không hợp lệ");
-          msg = "Điểm hóa không hợp lệ";
+          msg = "Address is invalid";
+        } else if (Class.length > 6) {
+          msg = "Class ID is invalid";
+        } else if (isNaN(MathScore)) {
+          msg = "Math score is invalid";
+        } else if (isNaN(PhysicsScore)) {
+          msg = "Physics score is invalid";
+        } else if (isNaN(ChemistryScore)) {
+          msg = "Chemistry score is invalid";
         } else {
           msg = "";
         }
@@ -58,14 +50,14 @@
   </head>
   <body>
     <div class="login-form">
-      <h1>Hồ sơ</h1>
+      <h1>Form</h1>
       <form>
         <div class="login_box">
           <input
             type="text"
-            id="MaHS"
-            name="MaHS"
-            placeholder="Mã học sinh"
+            id="StudentID"
+            name="StudentID"
+            placeholder="Student ID"
             onkeyup="checkInfo()"
             required
           />
@@ -73,9 +65,9 @@
         <div class="login_box">
           <input
             type="text"
-            id="HoTen"
-            name="HoTen"
-            placeholder="Họ và tên"
+            id="StudentName"
+            name="StudentName"
+            placeholder="Student name"
             onkeyup="checkInfo()"
             required
           />
@@ -85,7 +77,7 @@
             type="text"
             id="birth"
             name="birth"
-            placeholder="mm-dd-yy"
+            placeholder="Birth date"
             onkeyup="checkInfo()"
             required
           />
@@ -95,7 +87,7 @@
             type="text"
             id="addr"
             name="addr"
-            placeholder="Địa chỉ"
+            placeholder="Address"
             onkeyup="checkInfo()"
             required
           />
@@ -103,9 +95,9 @@
         <div class="login_box">
           <input
             type="text"
-            id="Lop"
-            name="Lop"
-            placeholder="Lớp"
+            id="Class"
+            name="Class"
+            placeholder="Class ID"
             onkeyup="checkInfo()"
             required
           />
@@ -113,9 +105,9 @@
         <div class="login_box">
           <input
             type="text"
-            id="DiemToan"
-            name="DiemToan"
-            placeholder="Điểm toán"
+            id="MathScore"
+            name="MathScore"
+            placeholder="Math score"
             onkeyup="checkInfo()"
             required
           />
@@ -123,9 +115,9 @@
         <div class="login_box">
           <input
             type="text"
-            id="DiemLy"
-            name="DiemLy"
-            placeholder="Điểm lý"
+            id="PhysicsScore"
+            name="PhysicsScore"
+            placeholder="Physics score"
             onkeyup="checkInfo()"
             required
           />
@@ -133,9 +125,9 @@
         <div class="login_box">
           <input
             type="text"
-            id="DiemHoa"
-            name="DiemHoa"
-            placeholder="Điểm hóa"
+            id="ChemistryScore"
+            name="ChemistryScore"
+            placeholder="Chemistry score"
             onkeyup="checkInfo()"
             required
           />

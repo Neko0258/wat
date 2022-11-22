@@ -9,24 +9,44 @@ const iconDownId = $(".icon-down-id")
 
 const list = [
   {
-    maSp: "SP001",
-    tenSp: "Máy giặt",
+    maSp: "AT001",
+    tenSp: "Television",
   },
   {
-    maSp: "SP002",
-    tenSp: "Bếp đa năng",
+    maSp: "AT002",
+    tenSp: "Stove",
   },
   {
-    maSp: "SP003",
-    tenSp: "Lò sưởi",
+    maSp: "AT003",
+    tenSp: "Refrigerator",
   },
   {
-    maSp: "SP004",
-    tenSp: "Điều hòa nhiệt độ",
+    maSp: "AT004",
+    tenSp: "Air Conditioner",
   },
   {
-    maSp: "SP005",
-    tenSp: "Tủ lạnh",
+    maSp: "AT005",
+    tenSp: "Fan",
+  },
+  {
+    maSp: "AT006",
+    tenSp: "Washing Machine",
+  },
+  {
+    maSp: "AT007",
+    tenSp: "Microwave",
+  },
+  {
+    maSp: "AT008",
+    tenSp: "Water Heater",
+  },
+  {
+    maSp: "AT009",
+    tenSp: "Dishwasher",
+  },
+  {
+    maSp: "AT010",
+    tenSp: "Toaster",
   },
 ];
 
@@ -53,12 +73,12 @@ render.unshift(`
         </th>
         <th id="sort-by-code">
             <i class="fa-sharp fa-solid fa-caret-up icon-up-code"></i>
-            Mã sản phẩm
+            Product Code
             <i class="fa-sharp fa-solid fa-caret-down icon-down-code"></i>
         </th>
         <th class="sort-by-name">
             <i class="fa-sharp fa-solid fa-caret-up icon-up-name"></i>
-            Tên sản phẩm
+            Product Name
             <i class="fa-sharp fa-solid fa-caret-down icon-down-name"></i>
         </th>
     </tr>

@@ -3,25 +3,30 @@ const $$ = document.querySelectorAll.bind(document)
 
 const students = [
     {
-        name: 'Hoàng Thị Thảo',
-        birthday: '23/6/1990',
-        gender: false
-    },
-    {
-        name: 'Ngô Mạnh Quân',
-        birthday: '14/4/1992',
+        name: 'Michael Scott',
+        birthday: '31/12/1998',
         gender: true
     },
     {
-        name: 'Nguyễn Thanh Tùng',
-        birthday: '27/9/1991',
+        name: 'Dwight Schrute',
+        birthday: '2/2/1998',
         gender: true
     },
     {
-        name: 'Hoàng Thị Ngân',
-        birthday: '12/12/1992',
+        name: 'Liz Lemon',
+        birthday: '3/3/1998',
         gender: false
     },
+    {
+        name: 'Pam Beesly',
+        birthday: '4/4/1998',
+        gender: true
+    },
+    {
+        name: 'Jim Halpert',
+        birthday: '5/5/1998',
+        gender: true
+    }
 ]
 
 const render = students.map((student, index) => {

@@ -44,7 +44,7 @@ const onValidateName = () => {
 const onValidateEmail = () => {
     const mailFormat = /\S+@\S+\.\S+/
     if(mailFormat.test(inputMail.value)) return
-    validateEmail.innerHTML = 'Định dạng email không chính xác'
+    validateEmail.innerHTML = 'Email invalid!'
 }
 
 inputBirthday.addEventListener('keyup', function (event) {
@@ -62,26 +62,26 @@ const onValidateBirthday = () => {
 }
 
 const onValidatePassword = () => {
-    if(inputPassword.value !== inputConfirmPass.value) validateConfirmPass.innerHTML = "Mật khẩu nhập lại không khớp!"
+    if(inputPassword.value !== inputConfirmPass.value) validateConfirmPass.innerHTML = "Wrong password!"
 }
 
 const onSubmit = () => {
     let isCheckedRadio = false
     let isCheckedCheckbox = false
 
-    inputName.value ? validateName.innerHTML = '' : validateName.innerHTML = 'Vui lòng nhập họ tên!'
-    inputBirthday.value ? validateBirthday.innerHTML = '' : validateBirthday.innerHTML = 'Vui lòng nhập ngày sinh!'
-    inputMail.value ? validateEmail.innerHTML = '' :  validateEmail.innerHTML = 'Vui lòng nhập email!'
-    inputUsername.value ? validateUsername.innerHTML = '' : validateUsername.innerHTML = 'Vui lòng nhập tên sử dụng!'
-    inputPassword.value ? validatePassword.innerHTML = '' : validatePassword.innerHTML = 'Vui lòng nhập mật khẩu!'
-    inputConfirmPass.value ? validatePassword.innerHTML = '' : validateConfirmPass.innerHTML = 'Vui lòng nhập xác nhận mật khẩu!'
+    inputName.value ? validateName.innerHTML = '' : validateName.innerHTML = 'Name invalid!'
+    inputBirthday.value ? validateBirthday.innerHTML = '' : validateBirthday.innerHTML = 'Birthday invalid!'
+    inputMail.value ? validateEmail.innerHTML = '' :  validateEmail.innerHTML = 'Email invalid!'
+    inputUsername.value ? validateUsername.innerHTML = '' : validateUsername.innerHTML = 'Username invalid!'
+    inputPassword.value ? validatePassword.innerHTML = '' : validatePassword.innerHTML = 'Password invalid!'
+    inputConfirmPass.value ? validatePassword.innerHTML = '' : validateConfirmPass.innerHTML = 'Confirm password invalid!'
     radios.forEach(radio => {
         if(radio.checked) isCheckedRadio = true
     })
-    isCheckedRadio ? validateGender.innerHTML = '' : validateGender.innerHTML = 'Vui lòng chọn giới tính!'
+    isCheckedRadio ? validateGender.innerHTML = '' : validateGender.innerHTML = 'Gender invalid!'
 
     checkboxes.forEach(checkbox => {
         if(checkbox.checked) isCheckedCheckbox = true
     })
-    isCheckedCheckbox ? validateCourse.innerHTML = '' : validateCourse.innerHTML = 'Vui lòng chọn khóa học'
+    isCheckedCheckbox ? validateCourse.innerHTML = '' : validateCourse.innerHTML = 'Course invalid!'
 }
